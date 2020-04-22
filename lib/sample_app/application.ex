@@ -10,6 +10,7 @@ defmodule SampleApp.Application do
     children = [
       # Start the Ecto repository
       SampleApp.Repo,
+      {Phoenix.PubSub, name: SampleApp.PubSub},
       # Start the endpoint when the application starts
       SampleAppWeb.Endpoint
       # Starts a worker by calling: SampleApp.Worker.start_link(arg)
